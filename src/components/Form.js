@@ -5,6 +5,8 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
     const inputTextHandler = (e) => {
        //TODO TRACK USER INPUT
        //HINT: USE setInputText
+       e.preventDefault()
+       setInputText(e.target.value)
        
     }
     const submitTodoHandler = (e) => {
@@ -14,10 +16,12 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
             {text: inputText, completed: false, id: Math.random() * 1000}
         ])
         //TODO: CLEAR USER INPUT
+        setInputText("")
         
     }
     const statusHandler = (e) => {
         //TODO: TRACK USER INPUT
+        setStatus(e.target.value)
     }
     
     //TODO: GET FORM BUTTON TO WORK
