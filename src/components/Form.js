@@ -3,10 +3,9 @@ import React from 'react'
 const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
     
     const inputTextHandler = (e) => {
-       //TODO TRACK USER INPUT
-       //HINT: USE setInputText
-       
+        setInputText(e.target.value)
     }
+    
     const submitTodoHandler = (e) => {
         e.preventDefault()
         setTodos([
@@ -14,13 +13,16 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
             {text: inputText, completed: false, id: Math.random() * 1000}
         ])
         //TODO: CLEAR USER INPUT
-        
+        setInputText("")
     }
+
     const statusHandler = (e) => {
         //TODO: TRACK USER INPUT
+        setStatus(e.target.value)
+        console.log(e.target.value)
     }
     
-    //TODO: GET FORM BUTTON TO WORK
+
     return(
         <form>
             <input data-testid='input' value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
