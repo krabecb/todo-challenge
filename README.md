@@ -34,15 +34,24 @@ this would be best exemplified as the categories that user posts can be organize
 ### In MongoDB, what is the difference between Embedded Documents and Document References? 
 Give examples for each.
 
+in mongoDB specifically, the difference between embedded documents and document references are that embedded documents are models nested within a given model, where document references are the addition of a separate model's primary key included within the creation of said document. no avaiable examples to provide at this time.
+
 ---
 
 ### In React, what is Lifting State Up? 
 Give an example.
+Lifting state up is the act of passing a variable's state from one component to a different component through it's props. 
+
+a great example of this would be setting a state variable that tracks a user's interaction with a specific element in x component, then passing that variable's updated state to y component after user interaction that will cause y component function differently based on the user's interaction with the element in x component.
 
 ---
 
 ### In React, what is Conditional Rendering?
 Give an example.
+
+in react, conditional rendering is setting a component to render based on conditions set and met by a specific function/code block.
+
+a great example of this is a conditional rendering method i used in my third project that displays elements based on the user's interaction with components in a separate "game" page. if the user interacted in a way that was deemed "correct" by the logic set on the "game" page, the elements on their "stats" page would render and update in relation to the variables passed through our database that were updated on the "game" page. this required the use of a map function as well as two conditional code blocks that compared the state of the user with specific logic variables to determine whether or not a component was generated, and what css styling would be attached when the component was generated.
 
 ---
 
